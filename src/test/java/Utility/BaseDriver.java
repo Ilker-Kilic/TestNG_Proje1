@@ -25,7 +25,7 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // 20 sn mühlet : elementi bulma mühleti
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        LoginTest();
+
     }
 
     public void LoginTest(){
@@ -52,6 +52,7 @@ public class BaseDriver {
         System.out.println("Kapanış İşlemleri Yapılıyor"); // BekleKapat
         Tools.Bekle(3);
         driver.quit();
+
     }
 
 
