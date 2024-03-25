@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="my suit">
+
+    <test name="test1">
+        <classes>
+            <class name="US_405.TC_405_testing"></class>
+        </classes>
+    </test>
+
+    <test name="test2">
+        <classes>
+            <class name="US_406.TC_406Tesing"></class>
+        </classes>
+    </test>
+
+    <test name="test3">
+        <classes>
+            <class name="US_406.TC_406_negativeTesting"></class>
+        </classes>
+    </test>
+
+</suite>
