@@ -10,12 +10,14 @@
 
     <test name="test2">
         <classes>
+            <parameter name="searchText" value="100JAN"></parameter>
             <class name="US_406.TC_406Tesing"></class>
         </classes>
     </test>
 
     <test name="test3">
         <classes>
+            <parameter name="searchText" value=" "></parameter>
             <class name="US_406.TC_406_negativeTesting"></class>
         </classes>
     </test>

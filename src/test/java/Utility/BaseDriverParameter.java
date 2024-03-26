@@ -22,11 +22,11 @@ public class BaseDriverParameter {
 
 
     @BeforeClass
-    @Parameters("browserTipi")
-    public void BaslangicIslemleri(String browserTipi) { // TearStart
+    @Parameters("browserType")
+    public void BaslangicIslemleri(String browserType) { // TearStart
         // System.out.println("başlangıç işlemleri yapılıyor"); //driver oluşturma, wait işlemleri,
 
-        switch (browserTipi.toLowerCase()) {
+        switch (browserType.toLowerCase()) {
             case "firefox":
                 driver = new FirefoxDriver();
                 break;
@@ -37,31 +37,31 @@ public class BaseDriverParameter {
                 driver = new ChromeDriver();
         }
 
-        //driver.manage().window().maximize(); // Ekranı max yapıyor.
+       driver.manage().window().maximize(); // Ekranı max yapıyor.
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // 20 sn mühlet: sayfayı yükleme mühlet
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // 20 sn mühlet: elementi bulma mühleti
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         Tools.Bekle(2);
-        LoginTest();
+
     }
 
     public void LoginTest() {
-        System.out.println("Login Test başladı");
-        driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+        System.out.println("Login Test Başladı");
+        driver.get("https://demo.openmrs.org/openmrs/login.htm");
         Tools.Bekle(2);
 
-        WebElement email = driver.findElement(By.id("input-email"));
-        email.sendKeys("testng1@gmail.com");
+        WebElement email= driver.findElement(By.id("username"));
+        email.sendKeys("admin");
 
-        WebElement password = driver.findElement(By.id("input-password"));
-        password.sendKeys("123qweasd");
+        WebElement password= driver.findElement(By.id("password"));
+        password.sendKeys("Admin123");
 
-        WebElement loginBtn = driver.findElement(By.xpath("//input[@type='submit']")); //By.cssSelector("[value='Login']")
-        loginBtn.click();
+        WebElement laboratuary=driver.findElement(By.xpath( "//ul[@id='sessionLocation']/li[3]"));
+        laboratuary.click();
 
-        wait.until(ExpectedConditions.titleIs("My Account"));
-        Assert.assertTrue(driver.getTitle().equals("My Account"));
+        WebElement logiBtn=driver.findElement(By.id("loginButton"));
+        logiBtn.click();
         System.out.println("Login Test bitti");
     }
 
