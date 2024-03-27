@@ -36,8 +36,16 @@ public class TC405_406_Elments {
     @FindBy(xpath = "//*[@id=\"patient-search-results-table\"]/tbody")
     public List<WebElement> Records;
 
-    @FindBy(xpath = "//*[@id=\"patient-search-results-table\"]/tbody/tr/td")
+    @FindBy(xpath = "//*[td[text()='100JAN']]")
+    public WebElement records100Jan;
+
+    @FindBy(xpath = "//*[@id=\"content\"]/div[9]/div[1]/div/div[1]")
+    public WebElement records100janDocument;
+
+    @FindBy(xpath = "//*[td[text()='No matching records found']]")
     public WebElement NoneMatch;
+
+
 
 
 

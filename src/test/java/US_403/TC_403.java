@@ -1,4 +1,0 @@
-package US_403;
-
-public class TC_403 {
-}
