@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="my suit">
+
+    <test name="test1">
+        <classes>
+            <class name="US_404.TC_404"></class>
+        </classes>
+    </test>
+
+    <test name="test2">
+        <classes>
+            <class name="US_407.TC_407"></class>
+        </classes>
+    </test>
+
+</suite>
