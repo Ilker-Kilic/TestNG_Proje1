@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="my suit">
+    <test name="test2">
+        <classes>
+            <parameter name="Name" value="Gencer"></parameter>
+            <parameter name="Surname" value="Genç"></parameter>
+            <class name="US_409.TC_409"></class>
+        </classes>
+    </test>
+    <test name="test3">
+        <classes>
+            <parameter name="Name" value="Ali"></parameter>
+            <parameter name="Surname" value="Cömert"></parameter>
+            <class name="US_409.TC_409"></class>
+        </classes>
+    </test>
+
+</suite>
