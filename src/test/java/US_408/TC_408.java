@@ -25,16 +25,16 @@ public class TC_408 extends BaseDriver {
         int count = Integer.parseInt(countString);
         System.out.println("Toplam Hasta : " + count);
 
-        int countRecord = myElements.Records.size(); // İlk sayfadaki kayıt sayısını al
+        int countRecord = myElements.Records.size();
 
-        double divisionResult = (double) count / 15; // count değerini 15'e böler
-        int clickCount = (int) Math.ceil(divisionResult); // Bölümü yukarıya yuvarla
+        double divisionResult = (double) count / 15;
+        int clickCount = (int) Math.ceil(divisionResult);
 
-        for (int i = 1; i < clickCount; i++) { // İlk sayfadan son sayfaya kadar dön
+        for (int i = 1; i < clickCount; i++) {
             myElements.dataTableNext.click();
-            countRecord += myElements.Records.size(); // Her sayfa değiştiğinde kayıt sayısını güncelle
+            countRecord += myElements.Records.size();
         }
-        System.out.println("Toplam Hasta : " + countRecord);
+        System.out.println("Toplam Sayılan Hasta : " + countRecord);
         Assert.assertEquals(countRecord, count, "Hasta sayısı eşleşmedi.");
     }
 
